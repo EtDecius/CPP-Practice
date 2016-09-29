@@ -1,0 +1,31 @@
+1990
+1991
+June
+1992
+January
+Day 1
+Hour 0: 61.5
+February
+Day 1
+Hour 1: 64
+Day 2
+Hour 2: 65.2
+2000
+February
+Day 1
+Hour 0: 67.2
+Hour 1: 68
+Day 1
+Hour 0: 67.2
+Hour 1: 68
+Day 2
+Hour 3: 66.76
+December
+Day 14
+Hour 0: -2
+Day 15
+Hour 14: -8.8
+Hour 15: -9.2
+Day 15
+Hour 14: -8.8
+Hour 15: -9.2

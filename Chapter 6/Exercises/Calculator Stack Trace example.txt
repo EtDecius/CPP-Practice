@@ -1,0 +1,93 @@
+input: (2+3);
+(	2	+	3	)	;
+C1	C2	C3	C4	C5	C6
+
+main()
+main()				-> token t = ts.get()
+get() 		C1			-> read ( from cin, create token, return token
+main()				-> compare ( token to sentinels, fail
+putback() 	C1			-> ts.putback(t), add ( token to ts.buffer
+main()				-> val = expression()
+expression()			-> double left = term()
+term()						-> double left = primary()
+primary()						-> Token t = ts.get()
+get() 		C1						-> return ( token from buffer		
+primary()						-> switch (t), case '('
+primary()						-> double d = expression()
+expression()						-> double left = term()
+term()									-> double left = primary()		
+primary()									-> Token t = ts.get()
+get()		C2									-> buffer empty, read 2 from cin and return 2 token
+primary()									-> t = 2 token
+primary()									-> switch (t), case '8' for number, return 2
+term()									-> left = 2
+term()									-> Token t = ts.get()
+get()		C3								-> buffer empty, read + from cin and return + token
+term()									-> t = + token
+term()									-> switch (t), case default, putback(t)
+putback()	C3								-> add + token to buffer, buffer = full
+term()									-> return 2
+expression()						-> left = 2
+expression()						-> Token t = ts.get()
+get()		C3							-> buffer full, return + token from buffer, buffer = empty
+expression()						-> t = + token
+expression()						-> switch (+)
+expression()						-> left += term()
+term()									-> double left = primary()
+primary()									-> Token t = ts.get()
+get()		C4									-> buffer empty, read 3 from cin and return 3 token
+primary()									-> t = 4 token
+primary()									-> switch (t), case '8' for number, return 3
+term()									-> left = 3
+term()									-> Token t = ts.get()
+ts.get()	C5								-> buffer empty, read ) from cin and return ) token
+term()									-> t = ) token
+term()									-> switch (t), default case, putback(t)
+putback()	C5								-> add ) token to buffer, buffer = full
+term()									-> return 3
+expression()						-> left += 3
+expression()						-> left (2) += 3
+expression()						-> left = 5
+expression()						-> t = ts.get()
+get()		C5							-> buffer full, return ) token from buffer, buffer = empty
+expression()						-> t = ) token
+expression()						-> GUESSING HERE  Switch breaks, while loop runs again
+expression()						-> switch ()), case default, putback(t)
+putback()	C5							-> buffer empty, ) token added to buffer, buffer = full
+expression()						-> return left, so return 5
+primary()						-> d = 5
+primary()						-> t = ts.get()
+get()								-> buffer full, return ) token, buffer = empty
+primary()						-> t = ) token
+primary()						-> if (t.kind != ')'
+primary()						-> check fails, as t.kind == ')', no error thrown
+primary()						-> return d, so return 5
+term()						-> left = 5
+term()						-> Token t = ts.get()
+get()		C6					-> buffer empty, read ; from cin and return ; token
+term()						-> t = ; token
+term()						-> switch (;), default case, ts.putback(t)
+putback()	C6					-> buffer empty, add ; token to buffer, buffer = full
+term()						-> return left, so return 5
+expression()			-> left = 5
+expression()			-> Token t = ts.get()
+get()		C6				-> buffer full, return ; token, buffer = empty
+expression()			-> t = ; token
+expression()			-> switch (;), default case, ts.putback(t)
+putback()	C6				-> buffer empty, ; token added to buffer, buffer = full
+expression()			-> return left, so return 5
+main()				-> val = 5
+main()				-> end of while loop, check while condition again
+main()				-> GUESSING while(cin) reads in newline char, loops again
+main()				-> Token t = ts.get()
+get()		C6			-> buffer full, return ; token, buffer = empty
+main()				-> t = ; token
+main()				-> if (t.kind == 'q') is false
+main()				-> if (t.kind == ';') is true, print val
+main() 				-> Wait for new input and do it again.
+
+
+
+
+
+

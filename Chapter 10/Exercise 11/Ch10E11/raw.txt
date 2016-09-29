@@ -1,0 +1,3 @@
+5 Write a program 8 that produces the sum of all the white-space 4 seperated 2
+integers from a 16 text file. For example, bears: 17 elephants 9 end should
+compute 26 (period). 1
