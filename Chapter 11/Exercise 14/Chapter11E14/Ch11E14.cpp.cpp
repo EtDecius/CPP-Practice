@@ -1,4 +1,4 @@
-// Chapter11E14.cpp
+// Ch11E14.cpp
 // Chapter 11, Exercise 14 (p.408)
 // Write a program that reads a text file and writes out how many characters
 // of each character classification (11.6) are in the file.
